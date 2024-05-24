@@ -74,5 +74,6 @@ static const struct arg args[] = {
 	{ battery_perc, " %s%% ",                     "BAT0" },
 	{ battery_remaining, " [%s] ",                "BAT0" },
 #endif
+	{ run_command, " %s ",                    "echo '|'" },
 	{ datetime, " %s ",      "%Y %b %d [%a] %I:%M %p %Z" },
 };
