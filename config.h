@@ -65,15 +65,17 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+	{ ram_used, " %s ",                             NULL },
+	{ run_command, "%s",                      "echo '/'" },
+	{ ram_total, " %s ",                            NULL },
+	{ run_command, " %s ",                    "echo '|'" },
 #ifdef __OpenBSD__
-	{ battery_state, " %s ",                        NULL },
+	{ battery_state, " [%s]: ",                     NULL },
 	{ battery_perc, " %s%% ",                       NULL },
-	{ battery_remaining, " [%s] ",                  NULL },
 #else
-	{ battery_state, " %s ",                      "BAT0" },
+	{ battery_state, " [%s]: ",                   "BAT0" },
 	{ battery_perc, " %s%% ",                     "BAT0" },
-	{ battery_remaining, " [%s] ",                "BAT0" },
 #endif
 	{ run_command, " %s ",                    "echo '|'" },
-	{ datetime, " %s ",      "%Y %b %d [%a] %I:%M %p %Z" },
+	{ datetime, " %s ",         "%Y %b %d (%a) %I:%M %p" },
 };
