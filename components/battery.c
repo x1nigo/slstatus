@@ -57,9 +57,9 @@
 			char *symbol;
 		} map[] = {
 			{ "Charging",      "+" },
-			{ "Discharging",    "" },
-			{ "Full",           "" },
-			{ "Not charging",   "" },
+			{ "Discharging",   "z" },
+			{ "Full",          "&" },
+			{ "Not charging",  "x" },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
@@ -156,7 +156,7 @@
 			char *symbol;
 		} map[] = {
 			{ APM_AC_ON,      "+" },
-			{ APM_AC_OFF,      "" },
+			{ APM_AC_OFF,     "z" },
 		};
 		struct apm_power_info apm_info;
 		size_t i;
